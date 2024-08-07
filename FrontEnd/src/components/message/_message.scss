@@ -1,0 +1,74 @@
+.message{
+  display: block;
+  border-radius: 10px;
+ text-indent: 10px;
+ padding: $base-padding - 10;
+ width: max-content;
+ max-width: 40%;
+ border: 1px solid #ddd;
+ position: relative;
+  &--user{
+
+    border-bottom-right-radius: 0;
+    &::before{
+      content: " ";
+      position: absolute;
+      width: 0;
+      height: 0;
+
+      display: block;
+      right: -$base-padding;
+      bottom: 0;
+      border-left: 10px solid gray;
+      border-right: 10px solid transparent;
+      border-top: 10px solid transparent;
+     
+
+    }
+
+
+
+  }
+
+
+  &--system{
+
+
+    border-bottom-left-radius: 0;
+    &::after{
+      content: " ";
+      position: absolute;
+      width: 0;
+      height: 0;
+      // border: 20px solid red;
+      display: block;
+      left: -$base-padding;
+      bottom: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid gray;
+      border-top: 10px solid transparent;
+     
+
+    }
+
+  }
+
+
+  ~ .message{
+    margin-top: 10px;
+  }
+  &::first-letter{
+    text-transform: capitalize;
+  }
+
+
+
+  &:not(:has(+ .message)) {
+    margin-bottom: 200px;
+    border: 1px solid green;
+  }
+  &:last-child {
+    margin-bottom: 100px;
+    color: red;
+  }
+}

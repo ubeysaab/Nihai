@@ -1,0 +1,112 @@
+
+$base-padding:20px;
+$base-margin:20px;
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+
+// 
+ul,ol {
+  padding: 0;
+
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  // @debug $font-family;
+  overflow: hidden;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }}
+
+
+
+
+
+
+.app{
+  width: 100dvw;
+  // min-height: 100dvh;
+  display: flex;
+  border: 1px solid red;
+}
+
+
+
+
+
+@import "./components/breackpointes";
+@import "./components/message/message";
+@import "./components/chatBox/chatbox";
+@import "./components/main/main";
+@import "./components/sidebar/sidebar";
+
+
+// utilities 
+.icon{
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+  &:hover{
+    cursor: pointer;
+  }
+ 
+}

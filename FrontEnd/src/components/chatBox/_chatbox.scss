@@ -1,0 +1,9 @@
+.chatbox{
+  border: 1px solid gray;
+  padding: $base-padding - 10;
+  border-radius: 5px;
+
+  ~ .chatbox{
+    margin-top: 10px;
+  }
+}
